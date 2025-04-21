@@ -1,0 +1,14 @@
+#formularioEditar
+{
+    background-color:aliceblue;
+    padding: 18px;
+    border-radius: 2%;
+    border-style:  solid ;
+    border-color: black  ;
+    border-width: 1px;
+     /* border: solid black 1px ; * solo se especifica el tipo de borde, el color y el ancho en una ssola línea*/
+}
+h2
+{
+    font-family: Tahoma, sans-serif;
+}
