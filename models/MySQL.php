@@ -41,6 +41,9 @@
             };
             return $resultado;
         }
+        public function obtenerUltimoId(){
+            mysqli_insert_id($this->conexion);
+        }
     }
 
 ?>
