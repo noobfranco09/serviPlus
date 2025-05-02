@@ -19,7 +19,7 @@ $mysql->desconectar();
 <body>
     <?php if(mysqli_num_rows($consulta)>0 && mysqli_num_rows($consulta2)>0): ?>
     <div class="container">
-        <form action="../controller/crearEmpleado.php" method="POST">
+        <form action="../controller/crearEmpleado.php" method="POST" enctype="multipart/form-data">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre">
             <br>
@@ -53,6 +53,11 @@ $mysql->desconectar();
             <br>
             <label for="telefono">Telefono</label>
             <input type="number" id="telefono" name="telefono">
+            <br>
+            <label for="fotEmpleado">Agregue una foto</label>
+            <br>
+            <input type="file" id="fotoEmpleado" name="fotoEmpleado" accept=".jpg,.jpeg,.png" required>
+            <br>
             <br>
 
             <button type="submit" >Enviar</button>

@@ -4,6 +4,9 @@ require_once './sanitizacionFuncion.php';
 $mysql=new Mysql();
 $mysql->conectar();
 
+
+$fotoEmpleado=$_POST['fotoEmpleado'];
+$files=[$fotoEmpleado];
 $nombre=$_POST['nombre'];
 $cedula=$_POST['cedula'];
 $cargo=$_POST['idCargo'];
@@ -12,6 +15,8 @@ $fechaIngreso=$_POST['fechaIngreso'];
 $salario=$_POST['salario'];
 $correo=$_POST['correo'];
 $telefono=$_POST['telefono'];
+
+
 
 $respuesta=sanitizarFormulario($nombre,$cedula,$cargo,$area,$fechaIngreso,$salario,$correo,$telefono);
 $longitud=count($respuesta);
@@ -30,7 +35,7 @@ if($longitud>0)
     values('$nombre','$cedula','$cargo','$area','$fechaIngreso','$salario','1','$correo','$telefono'); ";
     $mysql->consulta($consulta);
     echo"Registrado con Éxito";
-}else{echo"Por vafor, llene los campos correctmene";}
+}else{echo"Por vafor, llene los campos correctmene";} 
 
 
 

@@ -52,6 +52,7 @@
                                 <td><?php echo $empleado['estado'];?></td>
                                 <td><?php echo $empleado['correo'];?></td>
                                 <td><?php echo $empleado['telefono'];?></td>
+                                <td></td>
                                 <td>
                                     <a href="../controller/eliminarEmpleado.php?idEmpleado=<?php echo $empleado['idEmpleado']; ?>" onclick="return confirm('Estás seguro de eliminar este empleado?');">Eliminar</a>
                                 </td>
